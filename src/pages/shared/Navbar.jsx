@@ -5,9 +5,9 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const handleLogout =() =>{
+  const handleLogout = () => {
     logOut();
-  }
+  };
   const navItem = (
     <>
       <li>
@@ -27,29 +27,33 @@ const Navbar = () => {
             isActive ? "bg-indigo-400" : isPending ? "pending" : ""
           }
         >
-         All Toys
+          All Toys
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to={`/mytoys`}
-          className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
-          }
-        >
-         My Toys
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={`/addtoy`}
-          className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
-          }
-        >
-          Add A Toy
-        </NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink
+            to={`/mytoys`}
+            className={({ isActive, isPending }) =>
+              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            }
+          >
+            My Toys
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink
+            to={`/addtoy`}
+            className={({ isActive, isPending }) =>
+              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            }
+          >
+            Add A Toy
+          </NavLink>
+        </li>
+      )}
       <li>
         <NavLink
           to={`/blog`}
@@ -60,35 +64,40 @@ const Navbar = () => {
           Blog
         </NavLink>
       </li>
-      {
-        user ? <li>
-        <NavLink
-          to={`/login`}
-          onClick={handleLogout}
-          className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
-          }
-        >
-          LogOut
-        </NavLink>
-      </li> : <li>
-        <NavLink
-          to={`/login`}
-          className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
-          }
-        >
-          Login
-        </NavLink>
-      </li>
-      }
-      {
-        user && <>
-          <button title={user?.displayName}  className="btn btn-ghost btn-circle avatar">
+      {user ? (
+        <li>
+          <NavLink
+            to={`/login`}
+            onClick={handleLogout}
+            className={({ isActive, isPending }) =>
+              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            }
+          >
+            LogOut
+          </NavLink>
+        </li>
+      ) : (
+        <li>
+          <NavLink
+            to={`/login`}
+            className={({ isActive, isPending }) =>
+              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            }
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <>
+          <button
+            title={user?.displayName}
+            className="btn btn-ghost btn-circle avatar"
+          >
             <img className="w-full rounded-full mr-4" src={user?.photoURL} />
           </button>
         </>
-      }
+      )}
     </>
   );
   return (
@@ -119,7 +128,7 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl">
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
             <img src={title} alt="" />
           </Link>
         </div>

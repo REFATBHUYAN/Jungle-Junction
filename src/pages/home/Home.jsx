@@ -1,10 +1,15 @@
 import React from 'react';
+import Banner from './Banner';
+// import Gallary from './Gallary';
+import Categories from './Categories';
 
 const Home = () => {
     return (
-        <div>
-            <h1>this is home page</h1>
-        </div>
+        <>
+            <Banner></Banner>
+            {/* <Gallary></Gallary> */}
+            <Categories></Categories>
+        </>
     );
 };
 
