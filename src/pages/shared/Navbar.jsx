@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import title from "../../assets/title.png";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout =() =>{
+    logOut();
+  }
   const navItem = (
     <>
       <li>
@@ -55,7 +60,18 @@ const Navbar = () => {
           Blog
         </NavLink>
       </li>
-      <li>
+      {
+        user ? <li>
+        <NavLink
+          to={`/login`}
+          onClick={handleLogout}
+          className={({ isActive, isPending }) =>
+            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+          }
+        >
+          LogOut
+        </NavLink>
+      </li> : <li>
         <NavLink
           to={`/login`}
           className={({ isActive, isPending }) =>
@@ -65,22 +81,14 @@ const Navbar = () => {
           Login
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to={`/register`}
-          className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
-          }
-        >
-          Register
-        </NavLink>
-      </li>
-      <li>
-      {/* title={user?.displayName} */}
-        <button  className="btn btn-ghost btn-circle avatar">
-          <img className="w-10 rounded-full mr-4" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </button>
-      </li>
+      }
+      {
+        user && <>
+          <button title={user?.displayName}  className="btn btn-ghost btn-circle avatar">
+            <img className="w-full rounded-full mr-4" src={user?.photoURL} />
+          </button>
+        </>
+      }
     </>
   );
   return (

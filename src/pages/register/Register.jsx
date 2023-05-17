@@ -81,7 +81,7 @@ const Register = () => {
                       <span className="label-text">Email</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       placeholder="email"
                       className="input input-bordered"
