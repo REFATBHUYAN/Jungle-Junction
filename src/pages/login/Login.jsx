@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -15,7 +16,7 @@ const Login = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
-            <div className="card-body">
+            <div className="card-body w-full">
               <h1 className="text-5xl font-bold text-center mb-6">Login</h1>
               <form>
                 <div className="form-control">
@@ -46,6 +47,8 @@ const Login = () => {
                   />
                 </div>
               </form>
+              {/* state={{from: location?.state}} */}
+              <p className="font-bold mt-3">Don't have any Account ? Please ... <Link  to='/register' className="text-cyan-600 underline">Register</Link> </p>
               <div className="divider">OR</div>
               <div>
                 <button
