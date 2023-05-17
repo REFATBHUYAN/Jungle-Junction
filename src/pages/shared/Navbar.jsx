@@ -17,6 +17,46 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to={`/alltoys`}
+          className={({ isActive, isPending }) =>
+            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+          }
+        >
+         All Toys
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={`/mytoys`}
+          className={({ isActive, isPending }) =>
+            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+          }
+        >
+         My Toys
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={`/addtoy`}
+          className={({ isActive, isPending }) =>
+            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+          }
+        >
+          Add A Toy
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={`/blog`}
+          className={({ isActive, isPending }) =>
+            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+          }
+        >
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to={`/login`}
           className={({ isActive, isPending }) =>
             isActive ? "bg-indigo-400" : isPending ? "pending" : ""
