@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import ToyModal from "./ToyModal";
+// import ToyModal from "./ToyModal";
 
 const AllToys = () => {
   const toys = useLoaderData();
@@ -24,29 +24,15 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {/* <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Littel, Schaden and Vandervort</td>
-                <td>Canada</td>
-                <td>12/16/2020</td>
-                <td>Blue</td>
-              </tr> */}
 
               {toys.map((toy, i) => (
-                <tr>
+                <tr key={toy._id}>
                   <th>{i + 1}</th>
                   <td>{toy?.name}</td>
                   <td>{toy.toyName}</td>
                   <td>{toy.category}</td>
                   <td>{toy.price}</td>
                   <td>{toy.quantity}</td>
-                  {/* <td>
-                    <label htmlFor="my-modal-3" className="btn">
-                      Details
-                    </label>
-                  </td> */}
                   <td>
                     <Link to={`/toy/${toy._id}`}>
                       <button className="btn btn-primary">Details</button>
