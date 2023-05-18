@@ -7,13 +7,16 @@ import Update from "./Update";
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
+  const [selectedOption, setSelectedOption] = useState('1');
+
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?email=${user?.email}`)
+    fetch(`http://localhost:5000/toys?email=${user?.email}&price=${selectedOption}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
       });
-  }, [user]);
+  }, [user,selectedOption]);
+
   const handleDelete = (_id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -31,17 +34,44 @@ const MyToy = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            const remaining = toys.filter(toy => toy._id != _id);
+            const remaining = toys.filter((toy) => toy._id != _id);
             setToys(remaining);
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
           });
       }
     });
   };
+  const handleSortChange = (event) => {
+    const option = event.target.value;
+    console.log(option);
+    setSelectedOption(option);
+
+    console.log("Selected sorting option:", typeof option);
+  };
+
   return (
     <div>
       <h1>this is all toys page {toys.length}</h1>
+
       <h1>Table</h1>
+      <div>
+        <div className="flex items-center space-x-2">
+          <label htmlFor="sort" className="text-gray-700">
+            Sort by:
+          </label>
+          <select
+            id="sort"
+            name="sort"
+            className="rounded border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            value={selectedOption}
+            onChange={handleSortChange}
+          >
+            
+            <option value="1" selected>Price (Low to High)</option>
+            <option value="-1">Price (High to Low)</option>
+          </select>
+        </div>
+      </div>
       <div>
         <div className="overflow-x-auto">
           <table className="table table-compact w-full">
