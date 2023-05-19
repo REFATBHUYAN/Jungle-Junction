@@ -32,28 +32,28 @@ const Categories = () => {
         </div>
         <div>
           <Tabs className="text-center  flex flex-col justify-center">
-            <TabList className="tabs flex justify-around tabs-boxed mx-auto w-1/2 font-bold">
+            <TabList className="tabs md:flex md:justify-around tabs-boxed mx-auto  w-1/2 font-bold text-center p-7">
               <Tab
                 onClick={() => setCategory("Bear")}
-                className="tab rounded-md text-xl "
+                className="tab rounded-md text-xl sm:mx-auto"
               >
                 Teddy Bear
               </Tab>
               <Tab
                 onClick={() => setCategory("Dinosaur")}
-                className="tab rounded-md text-xl"
+                className="tab rounded-md text-xl sm:mx-auto"
               >
                 Dinosaur
               </Tab>
               <Tab
                 onClick={() => setCategory("Cat")}
-                className="tab rounded-md text-xl"
+                className="tab rounded-md text-xl sm:mx-auto"
               >
                 Cat
               </Tab>
               <Tab
                 onClick={() => setCategory("Dogs")}
-                className="tab rounded-md text-xl"
+                className="tab rounded-md text-xl sm:mx-auto"
               >
                 Dogs
               </Tab>
@@ -64,7 +64,7 @@ const Categories = () => {
                 <div
                   data-aos="fade-up"
                   data-aos-duration="3000"
-                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4"
+                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
                   {category == "Bear" &&
                     data.map((d) => (
@@ -76,7 +76,7 @@ const Categories = () => {
                 <div
                   data-aos="fade-up"
                   data-aos-duration="3000"
-                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4"
+                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
                   {category == "Dinosaur" &&
                     data.map((d) => (
@@ -88,7 +88,7 @@ const Categories = () => {
                 <div
                   data-aos="fade-up"
                   data-aos-duration="3000"
-                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4"
+                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
                   {category == "Cat" &&
                     data.map((d) => (
@@ -100,7 +100,7 @@ const Categories = () => {
                 <div
                   data-aos="fade-up"
                   data-aos-duration="3000"
-                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4"
+                  className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
                   {category == "Dogs" &&
                     data.map((d) => (

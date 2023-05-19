@@ -13,42 +13,42 @@ const Gallary = () => {
         </div>
         <Marquee>
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/v3Ms1d5/image-2.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/WFhBJr7/image-5.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/vsPFttd/unnamed-2.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/vPPD6f2/unnamed-5.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/zXmgY3n/image-3.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/JBj8PVW/image-6.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/sKwfHwj/unnamed-3.png"
             alt=""
           />
           <img
-            className="h-96 w-96 m-2 rounded-md"
+            className="h-96 w-60 md:w-96 m-2 rounded-md"
             src="https://i.ibb.co/qN2wjvV/unnamed-6.png"
             alt=""
           />

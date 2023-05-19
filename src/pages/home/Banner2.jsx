@@ -7,14 +7,14 @@ const Banner2 = () => {
   return (
     <div>
       <div className="hero min-h-screen bg-stone-300">
-        <div className="hero-content flex-col lg:flex-row gap-10">
+        <div className="hero-content flex-col lg:flex-row gap-10 p-7">
           <img
             data-aos="fade-right"
             data-aos-duration="3000"
             src="https://img.freepik.com/free-photo/close-up-child-playing-her-room_23-2149208189.jpg"
-            className=" rounded-lg shadow-2xl w-1/2"
+            className=" rounded-lg shadow-2xl w-full md:w-1/2"
           />
-          <div data-aos="fade-left" data-aos-duration="3000" className="w-1/2">
+          <div data-aos="fade-left" data-aos-duration="3000" className="w-full md:w-1/2">
             <h1 className="text-5xl font-bold">
               We Don't just sell Animals Toys
             </h1>

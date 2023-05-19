@@ -9,24 +9,14 @@ const Review = () => {
     <section className="max-w-full mx-auto bg-stone-300">
       <div className="py-10 max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold text-center">Reviews</h1>
-
-        <div className="flex gap-3 items-center justify-center my-10">
-          <h1 className="text-3xl font-bold text-center">
-            Avarage Coustomer Rating: 4.5/5{" "}
-          </h1>
-          <div className="flex gap-1">
-            <FaStar className="text-yellow-400"></FaStar>
-            <FaStar className="text-yellow-400"></FaStar>
-            <FaStar className="text-yellow-400"></FaStar>
-            <FaStar className="text-yellow-400"></FaStar>
-            <FaStar className="text-yellow-400"></FaStar>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <h1 className="text-3xl font-bold text-center my-10">
+          Avarage Coustomer Rating: 4.5/5
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-7 gap-4 mx-auto">
           <div
             data-aos="fade-right"
             data-aos-duration="3000"
-            className="w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>
@@ -46,7 +36,7 @@ const Review = () => {
           <div
             data-aos="fade-down"
             data-aos-duration="3000"
-            className="w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>
@@ -66,7 +56,7 @@ const Review = () => {
           <div
             data-aos="fade-left"
             data-aos-duration="3000"
-            className="w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>
@@ -79,7 +69,8 @@ const Review = () => {
             <p className="text-base font-semibold ">
               At this store, animal toys are more than just products. They carry
               a fantastic message of imagination, adventure, and creativity,
-              inviting endless playtime possibilities for children of all ages <br /> -- Rahim Ahmed
+              inviting endless playtime possibilities for children of all ages{" "}
+              <br /> -- Rahim Ahmed
             </p>
           </div>
         </div>

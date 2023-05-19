@@ -23,7 +23,7 @@ const AllToys = () => {
 
   return (
     <div>
-      <h1 className="">this is all toys page {toys.length}</h1>
+      <h1 className="font-bold text-center my-10 text-5xl">All Toys</h1>
       <form onSubmit={handleSearch}>
         <div className="form-control w-full mx-auto max-w-xs">
           <div className="flex gap-2">
@@ -33,7 +33,7 @@ const AllToys = () => {
               name="search"
               className="input input-bordered w-full max-w-xs"
             />
-            <input className="btn btn-primary" type="submit" value="Search" />
+            <input className="btn-custom" type="submit" value="Search" />
           </div>
         </div>
       </form>
@@ -63,7 +63,7 @@ const AllToys = () => {
                   <td>{toy.quantity}</td>
                   <td>
                     <Link to={`/toy/${toy._id}`}>
-                      <button className="btn btn-primary">Details</button>
+                      <button className="btn-custom">Details</button>
                     </Link>
                   </td>
                 </tr>

@@ -10,9 +10,9 @@ const SingleCard = ({ data }) => {
           <img src={photo} alt="Shoes" className="rounded-xl h-60" />
         </figure>
         <div className="card-body items-start text-center">
-          <h2 className="card-title">{toyName}</h2>
-          <p>Price: ${price}</p>
-          <p>Rating: {rating}</p>
+          <h2 className="card-title font-bold text-2xl">{toyName}</h2>
+          <p className="text-xl font-semibold">Price: ${price}</p>
+          <p className="text-xl font-semibold">Rating: {rating}</p>
           <div className="card-actions">
             <Link to={`/toy/${_id}`}>
               <button className="btn-custom">View Details</button>
