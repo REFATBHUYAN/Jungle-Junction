@@ -1,13 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 // import ToyModal from "./ToyModal";
 
 const AllToys = () => {
   const toys = useLoaderData();
   console.log(toys);
+  const [alltoys, setAllToys] = useState(toys);
+  const [search, setSearch] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const search = form.search.value;
+    setSearch(search);
+    form.reset();
+    fetch(`http://localhost:5000/search/${search}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToys(data);
+      });
+  };
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/search/${search}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setAllToys(data);
+  //     });
+  // }, [search]);
+
   return (
     <div>
       <h1>this is all toys page {toys.length}</h1>
+      <form onSubmit={handleSearch}>
+        <div className="form-control w-full mx-auto max-w-xs">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              placeholder="Type here"
+              name="search"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <input className="btn btn-primary" type="submit" value="Search" />
+          </div>
+        </div>
+      </form>
       <h1>Table</h1>
       <div>
         <div className="overflow-x-auto">
@@ -24,8 +60,7 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-
-              {toys.map((toy, i) => (
+              {alltoys.map((toy, i) => (
                 <tr key={toy._id}>
                   <th>{i + 1}</th>
                   <td>{toy?.name}</td>
