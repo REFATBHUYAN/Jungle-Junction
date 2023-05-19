@@ -20,17 +20,10 @@ const AllToys = () => {
         setAllToys(data);
       });
   };
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/search/${search}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setAllToys(data);
-  //     });
-  // }, [search]);
 
   return (
     <div>
-      <h1>this is all toys page {toys.length}</h1>
+      <h1 className="">this is all toys page {toys.length}</h1>
       <form onSubmit={handleSearch}>
         <div className="form-control w-full mx-auto max-w-xs">
           <div className="flex gap-2">
