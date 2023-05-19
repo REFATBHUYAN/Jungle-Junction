@@ -4,32 +4,32 @@ import logo from "../../assets/title.png";
 const Footer = () => {
   return (
     <>
-      <footer className=" flex flex-col justify-between p-10 bg-base-200 text-base-content">
+      <footer className=" flex flex-col justify-between p-10 bg-stone-500 text-white text-base-content">
         <div className="footer">
           <div>
             <img src={logo} alt="" />
-            <p>
+            <p className="font-bold text-xl">
               JUNGLE JUMBOREE
               <br />
               Providing reliable toy since 2016
             </p>
           </div>
           <div>
-            <span className="footer-title">Services</span>
-            <a className="link link-hover">Free Delivery</a>
-            <a className="link link-hover">Custom Design</a>
-            <a className="link link-hover">Kid Toy</a>
-            <a className="link link-hover">Home Delivery</a>
+            <span className="footer-title font-bold text-2xl">Services</span>
+            <a className="link link-hover font-semibold text-xl">Free Delivery</a>
+            <a className="link link-hover font-semibold text-xl">Custom Design</a>
+            <a className="link link-hover font-semibold text-xl">Kid Toy</a>
+            <a className="link link-hover font-semibold text-xl">Home Delivery</a>
           </div>
           <div>
-            <span className="footer-title">Company</span>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Shop</a>
+            <span className="footer-title font-bold text-2xl">Company</span>
+            <a className="link link-hover font-semibold text-xl">About us</a>
+            <a className="link link-hover font-semibold text-xl">Contact</a>
+            <a className="link link-hover font-semibold text-xl">Jobs</a>
+            <a className="link link-hover font-semibold text-xl">Shop</a>
           </div>
           <div>
-            <span className="footer-title">Contact Social</span>
+            <span className="footer-title font-bold text-2xl">Contact Social</span>
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-6">
-          <p>Copyright © 2026 - All right reserved by Jungle Jumboree Ltd</p>
+          <p className="font-bold text-2xl">Copyright © 2026 - All right reserved by Jungle Jumboree Ltd</p>
         </div>
       </footer>
     </>

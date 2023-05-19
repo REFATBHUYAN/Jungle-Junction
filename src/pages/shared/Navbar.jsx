@@ -14,7 +14,7 @@ const Navbar = () => {
         <NavLink
           to={`/`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
           }
         >
           Home
@@ -24,7 +24,7 @@ const Navbar = () => {
         <NavLink
           to={`/alltoys`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
           }
         >
           All Toys
@@ -35,7 +35,7 @@ const Navbar = () => {
           <NavLink
             to={`/mytoys`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+              isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
             }
           >
             My Toys
@@ -47,7 +47,7 @@ const Navbar = () => {
           <NavLink
             to={`/addtoy`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+              isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
             }
           >
             Add A Toy
@@ -58,7 +58,7 @@ const Navbar = () => {
         <NavLink
           to={`/blog`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+            isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
           }
         >
           Blog
@@ -70,7 +70,7 @@ const Navbar = () => {
             to={`/login`}
             onClick={handleLogout}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+              isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
             }
           >
             LogOut
@@ -81,7 +81,7 @@ const Navbar = () => {
           <NavLink
             to={`/login`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-indigo-400" : isPending ? "pending" : ""
+              isActive ? "bg-stone-500 text-white" : isPending ? "pending" : ""
             }
           >
             Login
@@ -101,8 +101,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <>
-      <div className="navbar bg-base-100">
+    <section className="max-w-full bg-stone-300 h-[90px] my-auto pt-2 font-bold">
+      <div className="navbar  max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -136,7 +136,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItem}</ul>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -5,7 +5,7 @@ const SingleCard = ({ data }) => {
   const {_id, photo, rating, price, toyName } = data;
   return (
     <div>
-      <div className="card h-96 w-96 bg-indigo-100 shadow-xl">
+      <div className="card w-full bg-stone-400 shadow-xl">
         <figure className="px-10 pt-10">
           <img src={photo} alt="Shoes" className="rounded-xl h-60" />
         </figure>
@@ -15,7 +15,7 @@ const SingleCard = ({ data }) => {
           <p>Rating: {rating}</p>
           <div className="card-actions">
             <Link to={`/toy/${_id}`}>
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn-custom">View Details</button>
             </Link>
           </div>
         </div>

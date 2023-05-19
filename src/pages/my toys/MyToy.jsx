@@ -7,10 +7,10 @@ import Update from "./Update";
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
-  const [selectedOption, setSelectedOption] = useState('1');
+  const [selectedOption, setSelectedOption] = useState('asen');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?email=${user?.email}&price=${selectedOption}`)
+    fetch(`http://localhost:5000/alltoys?email=${user?.email}&sort=${selectedOption}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
@@ -41,13 +41,13 @@ const MyToy = () => {
       }
     });
   };
-  const handleSortChange = (event) => {
-    const option = event.target.value;
-    console.log(option);
-    setSelectedOption(option);
+  // const handleSortChange = (event) => {
+  //   const option = event.target.value;
+  //   console.log(option);
+  //   setSelectedOption(option);
 
-    console.log("Selected sorting option:", typeof option);
-  };
+  //   console.log("Selected sorting option:", typeof option);
+  // };
 
   return (
     <div>
@@ -63,12 +63,12 @@ const MyToy = () => {
             id="sort"
             name="sort"
             className="rounded border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-            value={selectedOption}
-            onChange={handleSortChange}
+            // value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
           >
             
-            <option value="1" selected>Price (Low to High)</option>
-            <option value="-1">Price (High to Low)</option>
+            <option Value={'asen'}>Price (Low to High)</option>
+            <option value={'dese'}>Price (High to Low)</option>
           </select>
         </div>
       </div>

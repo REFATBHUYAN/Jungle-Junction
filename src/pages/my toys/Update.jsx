@@ -1,10 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Update = () => {
     // const {id} = useParams();
     // console.log(id);
+    const navigate = useNavigate();
     const singleData = useLoaderData();
     // console.log(singleData);
 
@@ -16,6 +18,7 @@ const Update = () => {
         formState: { errors },
       } = useForm();
       const onSubmit = (data) => {
+        data['price'] = parseInt(data.price);
         console.log(data);
         // form.reset();
         reset();
@@ -29,6 +32,12 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            Swal.fire(
+              'Data Updated Successfull!',
+              'Congratulation!',
+              'success'
+            )
+            navigate('/mytoys')
         })
 
     };
@@ -119,7 +128,7 @@ const Update = () => {
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
-              type="text"
+              type="number"
               name="floating_last_name"
               id="floating_last_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -140,7 +149,7 @@ const Update = () => {
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input
-              type="text"
+              type="number"
               name="floating_first_name"
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"

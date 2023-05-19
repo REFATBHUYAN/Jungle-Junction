@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import Lottie from "lottie-react";
+import lottiFile from '../../../public/63787-secure-login.json';
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -39,14 +41,9 @@ const Register = () => {
     <>
       <div>
         <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex-col lg:flex-row">
-            <div className="text-center w-1/2 lg:text-left">
-              <h1 className="text-5xl font-bold">Register now!</h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
+          <div className="hero-content w-3/4 flex-col lg:flex-row">
+            <div className="text-center h-3/4 w-full lg:text-left">
+              <Lottie className="bg-blue-200" animationData={lottiFile} loop={true} />;
             </div>
             <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
               <div className="card-body w-full">
@@ -102,7 +99,7 @@ const Register = () => {
                     <input
                       className="btn btn-primary"
                       type="submit"
-                      value="Login"
+                      value="Register"
                     />
                   </div>
                 </form>
