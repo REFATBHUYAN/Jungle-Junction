@@ -46,14 +46,14 @@ const Login = () => {
   };
 
   return (
-    <section className="">
-      <div>
-        <div className="hero min-h-screen bg-base-200">
+    <section className="max-w-full mx-auto bg-green-200">
+      <div className="max-w-7xl mx-auto bg-green-200">
+        <div className="hero min-h-screen bg-green-200">
           <div className="hero-content w-3/4 flex-col lg:flex-row">
             <div className="text-center h-3/4 w-full lg:text-left">
               <Lottie animationData={lottiFile} loop={true} />;
             </div>
-            <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card w-full max-w-sm shadow-2xl bg-green-300">
               <div className="card-body w-full">
                 <h1 className="text-5xl font-bold text-center mb-6">Login</h1>
                 <form onSubmit={handleLogin}>
@@ -81,7 +81,7 @@ const Login = () => {
                   </div>
                   <div className="form-control mt-6">
                     <input
-                      className="btn btn-primary"
+                      className="btn-custom"
                       type="submit"
                       value="Login"
                     />
@@ -98,7 +98,7 @@ const Login = () => {
                 <div>
                   <button
                     onClick={handleGoogleSing}
-                    className="flex font-bold items-center justify-center gap-4 border border-indigo-600 rounded-md w-full mx-auto py-2 text-center"
+                    className="hover:bg-green-400 flex font-bold items-center justify-center gap-4 border border-indigo-600 rounded-md w-full mx-auto py-2 text-center"
                   >
                     <FaGoogle></FaGoogle> Login With Google
                   </button>
