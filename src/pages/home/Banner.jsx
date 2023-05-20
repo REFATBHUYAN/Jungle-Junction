@@ -6,7 +6,7 @@ AOS.init();
 
 const Banner = () => {
   return (
-    <section className="py-10 bg-green-200 max-w-full mx-auto">
+    <section className=" bg-green-200 max-w-full mx-auto">
       <div
         className="hero min-h-screen text-white"
         style={{

@@ -8,22 +8,21 @@ const Banner2 = () => {
     <section>
       <div>
         <h1 className="text-5xl my-7 font-bold text-center">About Us</h1>
-        <div className="hero bg-green-200">
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          className="hero bg-green-200"
+        >
           <div className="hero-content flex-col lg:flex-row gap-10 p-7">
             <img
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
               src="https://img.freepik.com/free-photo/close-up-child-playing-her-room_23-2149208189.jpg"
               className=" rounded-lg shadow-2xl w-full md:w-1/2"
             />
             <div
-              data-aos="fade-left"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="1000"
-              className="w-full md:w-1/2"
-            >
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500" className="w-full md:w-1/2">
               <h1 className="text-5xl font-bold">
                 We Don't just sell Animals Toys
               </h1>

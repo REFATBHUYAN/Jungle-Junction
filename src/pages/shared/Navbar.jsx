@@ -133,7 +133,7 @@ const Navbar = () => {
       <div className="navbar  max-w-7xl mx-auto pb-2">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost sm:mr-5 lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -156,7 +156,7 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <Link to="/" className="normal-case ml-5 text-xl">
+          <Link to="/" className="normal-case pl-5 text-xl">
             <div className="flex items-center gap-2 justify-center">
               <img className="w-10 md:w-14 pb-2 rounded-md " src={title} alt="" />
               <h1 className="text-xl md:text-3xl"><span className="text-5xl">J</span>ungle<span className="text-5xl">J</span>unction</h1>

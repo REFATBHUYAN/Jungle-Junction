@@ -7,7 +7,7 @@ AOS.init();
 const Gallary = () => {
   return (
     <section  className="py-10 bg-green-200 max-w-full mx-auto ">
-      <div className="max-w-7xl mx-auto overflow-hidden">
+      <div className=" overflow-hidden">
         <div>
           <h1 className="text-5xl mb-10 font-bold text-center">Gallary</h1>
         </div>
