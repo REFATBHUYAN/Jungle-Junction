@@ -36,11 +36,11 @@ const Blog = () => {
           </div>
           <div className="card w-full bg-green-400 text-primary-content text-black">
             <div className="card-body">
-              <h2 className="card-title">
+              <h2 className="card-title text-black">
                 1. Compare SQL and NoSQL databases?
               </h2>
-              <p >SQL databases (Relational Databases):</p>
-              <ul className="list-inside list-disc pl-5">
+              <p className="font-semibold text-black">SQL databases (Relational Databases):</p>
+              <ul className="list-inside list-disc pl-5 text-black">
                 <li>
                   Structured Query Language (SQL) databases store structured
                   data in tables with predefined schemas.
@@ -58,8 +58,8 @@ const Blog = () => {
                 </li>
                 <li>Examples: MySQL, PostgreSQL, Oracle.</li>
               </ul>
-              <p>NoSQL databases (Non-relational Databases):</p>
-              <ul className="list-inside list-disc pl-5">
+              <p className="font-semibold text-black">NoSQL databases (Non-relational Databases):</p>
+              <ul className="list-inside list-disc pl-5 text-black">
                 <li>
                   NoSQL databases store unstructured or semi-structured data,
                   offering flexibility in data models.
@@ -79,10 +79,10 @@ const Blog = () => {
           </div>
           <div className="card w-full bg-green-400 text-primary-content text-black">
             <div className="card-body">
-              <h2 className="card-title">
+              <h2 className="card-title text-black">
                 3. What is express js? What is Nest JS?
               </h2>
-              <p>
+              <p className=" text-black">
                 Express.js is a minimal and flexible web application framework
                 for Node.js. It simplifies the process of building web
                 applications and APIs by providing a set of features and
@@ -97,10 +97,10 @@ const Blog = () => {
           </div>
           <div className="card w-full bg-green-400 text-primary-content text-black">
             <div className="card-body">
-              <h2 className="card-title">
+              <h2 className="card-title text-black">
                 4. What is MongoDB aggregate and how does it work ?
               </h2>
-              <p>
+              <p className=" text-black">
                 In MongoDB, the aggregate function is used to perform advanced
                 data aggregation operations. It allows you to process and
                 transform data from multiple documents in a collection. It works

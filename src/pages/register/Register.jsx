@@ -40,14 +40,14 @@ const Register = () => {
       .catch((error) => setError(error.message));
   };
   return (
-    <>
-      <div>
-        <div className="hero min-h-screen bg-base-200">
+    <section className="bg-green-200 max-w-full mx-auto">
+      <div className="max-w-7xl mx-auto">
+        <div className="hero min-h-screen bg-green-200">
           <div className="hero-content w-3/4 flex-col lg:flex-row">
-            <div className="text-center h-3/4 w-full lg:text-left">
-              <Lottie className="bg-blue-200" animationData={lottiFile} loop={true} />;
+            <div className="text-center h-3/4 w-full lg:text-left ">
+              <Lottie className="rounded-xl" animationData={lottiFile} loop={true} />
             </div>
-            <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-green-300">
               <div className="card-body w-full">
                 <h1 className="text-5xl font-bold text-center mb-6">
                   Register
@@ -99,7 +99,7 @@ const Register = () => {
                   </div>
                   <div className="form-control mt-6">
                     <input
-                      className="btn btn-primary"
+                      className="btn-custom"
                       type="submit"
                       value="Register"
                     />
@@ -118,7 +118,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
