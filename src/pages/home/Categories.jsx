@@ -25,14 +25,14 @@ const Categories = () => {
   }, [category]);
 
   return (
-    <section className="max-w-full bg-green-300 mx-auto">
+    <section className="max-w-full bg-green-200 mx-auto">
       <div className="max-w-7xl mx-auto">
         <div>
           <h1 className="mb-10 text-5xl font-bold text-center">Categories</h1>
         </div>
         <div>
           <Tabs className="text-center  flex flex-col justify-center">
-            <TabList className="tabs md:flex md:justify-around tabs-boxed mx-auto  w-1/2 font-bold text-center p-7">
+            <TabList className="tabs md:flex md:justify-around tabs-boxed mx-auto bg-green-400 shadow-xl  w-1/2 font-bold text-center p-7">
               <Tab
                 onClick={() => setCategory("Bear")}
                 className="tab rounded-md text-xl sm:mx-auto"

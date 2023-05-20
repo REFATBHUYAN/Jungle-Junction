@@ -14,7 +14,7 @@ const Navbar = () => {
         <NavLink
           to={`/`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
           }
         >
           Home
@@ -24,7 +24,7 @@ const Navbar = () => {
         <NavLink
           to={`/alltoys`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
           }
         >
           All Toys
@@ -35,7 +35,7 @@ const Navbar = () => {
           <NavLink
             to={`/mytoys`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
             }
           >
             My Toys
@@ -47,7 +47,7 @@ const Navbar = () => {
           <NavLink
             to={`/addtoy`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
             }
           >
             Add A Toy
@@ -58,7 +58,7 @@ const Navbar = () => {
         <NavLink
           to={`/blog`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
           }
         >
           Blog
@@ -70,7 +70,7 @@ const Navbar = () => {
             to={`/login`}
             onClick={handleLogout}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
             }
           >
             LogOut
@@ -81,7 +81,7 @@ const Navbar = () => {
           <NavLink
             to={`/login`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white" : isPending ? "pending" : ""
+              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
             }
           >
             Login
@@ -101,7 +101,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <section className="max-w-full bg-green-700 h-[90px] my-auto pt-2 font-bold text-white">
+    <section className="max-w-full bg-green-700 h-20 my-auto pt-2 font-bold text-white">
       <div className="navbar  max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -132,8 +132,8 @@ const Navbar = () => {
             <img src={title} alt="" />
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navItem}</ul>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal">{navItem}</ul>
         </div>
       </div>
     </section>
