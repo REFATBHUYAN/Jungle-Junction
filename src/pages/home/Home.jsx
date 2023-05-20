@@ -9,13 +9,13 @@ import useTitle from "../../hook/useTitle";
 const Home = () => {
   useTitle('Home')
   return (
-    <body className="bg-green-200">
+    <div className="bg-green-200 max-w-full mx-auto overflow-hidden">
       <Banner></Banner>
       <Gallary></Gallary>
       <Categories></Categories>
       <Banner2></Banner2>
       <Review></Review>
-    </body>
+    </div>
   );
 };
 

@@ -15,7 +15,8 @@ const Review = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-7 gap-4 mx-auto">
           <div
             data-aos="fade-right"
-            data-aos-duration="3000"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
             className="w-72 mx-auto md:w-96 border border-green-500 rounded-md p-5 space-y-3 bg-green-400 shadow-xl"
           >
             <div className="flex gap-1">
@@ -34,8 +35,9 @@ const Review = () => {
             </p>
           </div>
           <div
-            data-aos="fade-down"
-            data-aos-duration="3000"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-duration="2000"
             className="w-72 mx-auto md:w-96 border border-green-500 rounded-md p-5 space-y-3 bg-green-400 shadow-xl"
           >
             <div className="flex gap-1">
@@ -54,8 +56,7 @@ const Review = () => {
             </p>
           </div>
           <div
-            data-aos="fade-left"
-            data-aos-duration="3000"
+            data-aos="fade-down"
             className="w-72 mx-auto md:w-96 border border-green-500 rounded-md p-5 space-y-3 bg-green-400 shadow-xl"
           >
             <div className="flex gap-1">

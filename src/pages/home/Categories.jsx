@@ -11,13 +11,16 @@ const Categories = () => {
   const [data, setData] = useState([]);
   // https://assignment-11-batch-7-server.vercel.app/filter/Bear
   useEffect(() => {
-    fetch(`https://assignment-11-batch-7-server.vercel.app/filter/${category}`, {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(),
-    })
+    fetch(
+      `https://assignment-11-batch-7-server.vercel.app/filter/${category}`,
+      {
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -30,14 +33,18 @@ const Categories = () => {
         <div>
           <h1 className="mb-10 text-5xl font-bold text-center">Categories</h1>
         </div>
-        <div>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
           <Tabs className="text-center  flex flex-col justify-center">
             <TabList className="tabs md:flex md:justify-around tabs-boxed mx-auto bg-green-400 shadow-xl  w-1/2 font-bold text-center p-7">
               <Tab
                 onClick={() => setCategory("Bear")}
                 className="tab rounded-md text-xl sm:mx-auto"
               >
-                Teddy Bear
+                Bear
               </Tab>
               <Tab
                 onClick={() => setCategory("Dinosaur")}
@@ -62,8 +69,9 @@ const Categories = () => {
             <div className="">
               <TabPanel>
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
                   className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
                   {category == "Bear" &&
@@ -74,7 +82,7 @@ const Categories = () => {
               </TabPanel>
               <TabPanel>
                 <div
-                  data-aos="fade-up"
+                  data-aos="flip-up"
                   data-aos-duration="3000"
                   className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
@@ -86,7 +94,7 @@ const Categories = () => {
               </TabPanel>
               <TabPanel>
                 <div
-                  data-aos="fade-up"
+                  data-aos="flip-up"
                   data-aos-duration="3000"
                   className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
@@ -98,7 +106,7 @@ const Categories = () => {
               </TabPanel>
               <TabPanel>
                 <div
-                  data-aos="fade-up"
+                  data-aos="flip-up"
                   data-aos-duration="3000"
                   className="grid grid-cols-1 md:grid-cols-3 my-10 gap-4 p-7"
                 >
