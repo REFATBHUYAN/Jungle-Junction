@@ -6,7 +6,7 @@ AOS.init();
 
 const Review = () => {
   return (
-    <section className="max-w-full mx-auto bg-stone-300">
+    <section className="max-w-full mx-auto bg-green-300">
       <div className="py-10 max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold text-center">Reviews</h1>
         <h1 className="text-3xl font-bold text-center my-10">
@@ -16,7 +16,7 @@ const Review = () => {
           <div
             data-aos="fade-right"
             data-aos-duration="3000"
-            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-green-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>
@@ -36,7 +36,7 @@ const Review = () => {
           <div
             data-aos="fade-down"
             data-aos-duration="3000"
-            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-green-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>
@@ -56,7 +56,7 @@ const Review = () => {
           <div
             data-aos="fade-left"
             data-aos-duration="3000"
-            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-stone-400 "
+            className="w-72 mx-auto md:w-96 border border-stone-500 rounded-md p-5 space-y-3 bg-green-400 "
           >
             <div className="flex gap-1">
               <FaStar className="text-yellow-400"></FaStar>

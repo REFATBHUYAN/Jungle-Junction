@@ -22,7 +22,7 @@ const Update = () => {
         console.log(data);
         // form.reset();
         reset();
-        fetch(`http://localhost:5000/toys/${singleData._id}`,{
+        fetch(`https://assignment-11-batch-7-server.vercel.app/toys/${singleData._id}`,{
             method: 'PATCH',
             headers:{
                 'content-type': 'application/json'

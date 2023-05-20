@@ -14,7 +14,7 @@ const AllToys = () => {
     const search = form.search.value;
     setSearch(search);
     form.reset();
-    fetch(`http://localhost:5000/search/${search}`)
+    fetch(`https://assignment-11-batch-7-server.vercel.app/search/${search}`)
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);
@@ -37,7 +37,6 @@ const AllToys = () => {
           </div>
         </div>
       </form>
-      <h1>Table</h1>
       <div>
         <div className="overflow-x-auto">
           <table className="table table-compact w-full">

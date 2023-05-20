@@ -9,9 +9,9 @@ AOS.init();
 const Categories = () => {
   const [category, setCategory] = useState("Bear");
   const [data, setData] = useState([]);
-  // http://localhost:5000/filter/Bear
+  // https://assignment-11-batch-7-server.vercel.app/filter/Bear
   useEffect(() => {
-    fetch(`http://localhost:5000/filter/${category}`, {
+    fetch(`https://assignment-11-batch-7-server.vercel.app/filter/${category}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -25,7 +25,7 @@ const Categories = () => {
   }, [category]);
 
   return (
-    <section className="max-w-full bg-stone-300 mx-auto">
+    <section className="max-w-full bg-green-300 mx-auto">
       <div className="max-w-7xl mx-auto">
         <div>
           <h1 className="mb-10 text-5xl font-bold text-center">Categories</h1>

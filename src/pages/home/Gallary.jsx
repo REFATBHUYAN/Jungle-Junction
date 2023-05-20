@@ -6,7 +6,7 @@ AOS.init();
 
 const Gallary = () => {
   return (
-    <section data-aos="fade-up" className="py-16 bg-stone-300 max-w-full mx-auto">
+    <section data-aos="fade-up" className="py-16 bg-green-300 max-w-full mx-auto">
       <div className="">
         <div>
           <h1 className="text-5xl my-10 font-bold text-center">Gallary</h1>

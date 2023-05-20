@@ -10,7 +10,7 @@ const MyToy = () => {
   const [selectedOption, setSelectedOption] = useState('asen');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys?email=${user?.email}&sort=${selectedOption}`)
+    fetch(`https://assignment-11-batch-7-server.vercel.app/alltoys?email=${user?.email}&sort=${selectedOption}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
@@ -28,7 +28,7 @@ const MyToy = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://assignment-11-batch-7-server.vercel.app/toys/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

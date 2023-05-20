@@ -7,7 +7,7 @@ import Review from "./Review";
 
 const Home = () => {
   return (
-    <body className="bg-stone-300">
+    <body className="bg-green-300">
       <Banner></Banner>
       <Gallary></Gallary>
       <Categories></Categories>

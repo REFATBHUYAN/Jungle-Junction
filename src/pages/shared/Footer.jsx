@@ -4,7 +4,7 @@ import logo from "../../assets/title.png";
 const Footer = () => {
   return (
     <>
-      <footer className=" flex flex-col justify-between p-10 bg-stone-500 text-white text-base-content">
+      <footer className=" flex flex-col justify-between p-10 bg-green-900 text-white text-base-content">
         <div className="footer">
           <div>
             <img src={logo} alt="" />

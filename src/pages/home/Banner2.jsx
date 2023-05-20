@@ -6,7 +6,7 @@ AOS.init();
 const Banner2 = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-stone-300">
+      <div className="hero min-h-screen bg-green-300">
         <div className="hero-content flex-col lg:flex-row gap-10 p-7">
           <img
             data-aos="fade-right"

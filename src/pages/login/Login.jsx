@@ -3,7 +3,7 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Lottie from "lottie-react";
-import lottiFile from '../../../public/63787-secure-login.json';
+import lottiFile from '/public/63787-secure-login.json';
 
 const Login = () => {
   const [error, setError] = useState("");
