@@ -1,14 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../hook/useTitle";
+import { Audio } from "react-loader-spinner";
 // import ToyModal from "./ToyModal";
 
 const AllToys = () => {
-  const toys = useLoaderData();
-  console.log(toys);
-  const [alltoys, setAllToys] = useState(toys);
+  const [alltoys, setAllToys] = useState([]);
   const [search, setSearch] = useState("");
+  const [loader, setLoader] = useState(true);
   useTitle('All Toys')
+
+  useEffect(()=>{
+    fetch(`https://assignment-11-batch-7-server.vercel.app/toys`)
+    .then(res=>res.json())
+    .then(data =>{
+      setAllToys(data);
+      setLoader(false);
+    })
+  },[])
+
+  if(loader){
+    return <div className="mx-auto text-center"><Audio
+    height = "80"
+    width = "80"
+    radius = "9"
+    color = 'green'
+    ariaLabel = 'three-dots-loading'     
+    wrapperStyle
+    wrapperClass
+  /></div>
+  }
 
   const handleSearch = (e) => {
     e.preventDefault();

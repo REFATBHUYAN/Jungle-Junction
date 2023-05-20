@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Update from "./Update";
 import useTitle from "../../hook/useTitle";
+import { Audio } from "react-loader-spinner";
 
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [selectedOption, setSelectedOption] = useState("asen");
+  const [loader, setLoader] = useState(true);
   useTitle('My Toys');
 
   useEffect(() => {
@@ -18,8 +20,21 @@ const MyToy = () => {
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
+        setLoader(false);
       });
   }, [user, selectedOption]);
+
+  if(loader){
+    return <div className="mx-auto text-center"><Audio
+    height = "80"
+    width = "80"
+    radius = "9"
+    color = 'green'
+    ariaLabel = 'three-dots-loading'     
+    wrapperStyle
+    wrapperClass
+  /></div>
+  }
 
   const handleDelete = (_id) => {
     Swal.fire({
