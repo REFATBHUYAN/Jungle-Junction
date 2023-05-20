@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const Update = () => {
   // const {id} = useParams();
@@ -9,6 +10,7 @@ const Update = () => {
   const navigate = useNavigate();
   const singleData = useLoaderData();
   // console.log(singleData);
+  useTitle('Update Toy')
 
   const {
     register,

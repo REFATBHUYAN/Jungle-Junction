@@ -3,11 +3,13 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Update from "./Update";
+import useTitle from "../../hook/useTitle";
 
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [selectedOption, setSelectedOption] = useState("dese");
+  useTitle('My Toys');
 
   useEffect(() => {
     fetch(

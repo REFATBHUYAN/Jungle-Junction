@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import title from "../../assets/title.png";
+import title from "../../assets/title2.png";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
@@ -14,7 +14,11 @@ const Navbar = () => {
         <NavLink
           to={`/`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+            isActive
+              ? "bg-green-600 text-white rounded-md"
+              : isPending
+              ? "pending"
+              : ""
           }
         >
           Home
@@ -24,7 +28,11 @@ const Navbar = () => {
         <NavLink
           to={`/alltoys`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+            isActive
+              ? "bg-green-600 text-white rounded-md"
+              : isPending
+              ? "pending"
+              : ""
           }
         >
           All Toys
@@ -35,7 +43,11 @@ const Navbar = () => {
           <NavLink
             to={`/mytoys`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+              isActive
+                ? "bg-green-600 text-white rounded-md"
+                : isPending
+                ? "pending"
+                : ""
             }
           >
             My Toys
@@ -47,7 +59,11 @@ const Navbar = () => {
           <NavLink
             to={`/addtoy`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+              isActive
+                ? "bg-green-600 text-white rounded-md"
+                : isPending
+                ? "pending"
+                : ""
             }
           >
             Add A Toy
@@ -58,7 +74,11 @@ const Navbar = () => {
         <NavLink
           to={`/blog`}
           className={({ isActive, isPending }) =>
-            isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+            isActive
+              ? "bg-green-600 text-white rounded-md"
+              : isPending
+              ? "pending"
+              : ""
           }
         >
           Blog
@@ -70,7 +90,11 @@ const Navbar = () => {
             to={`/login`}
             onClick={handleLogout}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+              isActive
+                ? "bg-green-600 text-white rounded-md"
+                : isPending
+                ? "pending"
+                : ""
             }
           >
             LogOut
@@ -81,7 +105,11 @@ const Navbar = () => {
           <NavLink
             to={`/login`}
             className={({ isActive, isPending }) =>
-              isActive ? "bg-green-600 text-white rounded-md" : isPending ? "pending" : ""
+              isActive
+                ? "bg-green-600 text-white rounded-md"
+                : isPending
+                ? "pending"
+                : ""
             }
           >
             Login
@@ -101,8 +129,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <section className="max-w-full bg-green-700 h-20 my-auto pt-2 font-bold text-white">
-      <div className="navbar  max-w-7xl mx-auto">
+    <section className="max-w-full bg-green-700 h-24 my-auto pt-2 font-bold text-white">
+      <div className="navbar  max-w-7xl mx-auto pb-2">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -128,8 +156,11 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
-            <img src={title} alt="" />
+          <Link to="/" className="normal-case text-xl">
+            <div className="flex items-center gap-2 justify-center">
+              <img className="w-14 pb-2 rounded-md" src={title} alt="" />
+              <h1 className="text-3xl"><span className="text-5xl">J</span>ungle<span className="text-5xl">J</span>unction</h1>
+            </div>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

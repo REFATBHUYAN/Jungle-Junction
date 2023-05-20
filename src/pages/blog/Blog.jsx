@@ -1,23 +1,25 @@
 import React from "react";
+import useTitle from "../../hook/useTitle";
 
 const Blog = () => {
+  useTitle('Blog');
   return (
     <section className="max-w-full mx-auto bg-green-200 ">
       <div className="max-w-7xl mx-auto">
         <h1 className="font-bold text-center py-10 text-5xl">Blogs</h1>
         <div className="grid grid-cols-1 py-10 gap-2 ">
-          <div className="card w-full bg-green-400 text-primary-content text-black">
+          <div className="card w-full bg-green-400 text-primary-content ">
             <div className="card-body">
-              <h2 className="card-title">
+              <h2 className="card-title text-black">
                 1. What is an access token and refresh token? How do they work
                 and where should we store them on the client-side?
               </h2>
-              <p >
-                Access Token: <br /> An access token is like a key that allows a
+              <p className="text-black">
+                <span className="font-semibold text-black">Access Token:</span> <br /> An access token is like a key that allows a
                 user or application to access protected resources. It's
                 generated when you log in or authenticate and has an expiration
                 time. You include it with your requests to prove your identity
-                and get the data you need. <br /> Refresh Token: <br /> A
+                and get the data you need. <br /> <span className="font-semibold text-black">Refresh Token:</span> <br /> A
                 refresh token is a long-lasting key that helps you get a new
                 access token when the old one expires. It's issued during
                 authentication and used to request a fresh access token without

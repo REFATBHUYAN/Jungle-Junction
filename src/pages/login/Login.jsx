@@ -4,8 +4,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Lottie from "lottie-react";
 import lottiFile from '/public/63787-secure-login.json';
+import useTitle from "../../hook/useTitle";
 
 const Login = () => {
+  useTitle('Login');
   const [error, setError] = useState("");
   const { googleSingIn, githubSingIn, loginUser } = useContext(AuthContext);
   const navigate = useNavigate();

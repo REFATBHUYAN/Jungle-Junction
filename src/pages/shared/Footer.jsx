@@ -1,25 +1,39 @@
 import React from "react";
-import logo from "../../assets/title.png";
+import logo from "../../assets/title2.png";
 
 const Footer = () => {
   return (
     <>
       <footer className=" flex flex-col justify-between p-10 bg-green-900 text-white text-base-content">
         <div className="footer">
-          <div>
+          {/* <div>
             <img src={logo} alt="" />
             <p className="font-bold text-xl">
               JUNGLE JUMBOREE
               <br />
               Providing reliable toy since 2016
             </p>
+          </div> */}
+          <div className=" items-center gap-2 justify-center">
+            <img className="w-14 pb-2 rounded-md" src={logo} alt="" />
+            <h1 className="text-3xl">
+              <span className="text-5xl">J</span>ungle
+              <span className="text-5xl">J</span>unction
+            </h1>
+            <p className="font-bold text-xl"> Providing reliable toy since 2016</p>
           </div>
           <div>
             <span className="footer-title font-bold text-2xl">Services</span>
-            <a className="link link-hover font-semibold text-xl">Free Delivery</a>
-            <a className="link link-hover font-semibold text-xl">Custom Design</a>
+            <a className="link link-hover font-semibold text-xl">
+              Free Delivery
+            </a>
+            <a className="link link-hover font-semibold text-xl">
+              Custom Design
+            </a>
             <a className="link link-hover font-semibold text-xl">Kid Toy</a>
-            <a className="link link-hover font-semibold text-xl">Home Delivery</a>
+            <a className="link link-hover font-semibold text-xl">
+              Home Delivery
+            </a>
           </div>
           <div>
             <span className="footer-title font-bold text-2xl">Company</span>
@@ -29,7 +43,9 @@ const Footer = () => {
             <a className="link link-hover font-semibold text-xl">Shop</a>
           </div>
           <div>
-            <span className="footer-title font-bold text-2xl">Contact Social</span>
+            <span className="footer-title font-bold text-2xl">
+              Contact Social
+            </span>
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg
@@ -68,7 +84,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-6">
-          <p className="font-bold text-2xl">Copyright © 2026 - All right reserved by Jungle Jumboree Ltd</p>
+          <p className="font-bold text-base">
+            Copyright © 2026 - All right reserved by JungleJunction Ltd
+          </p>
         </div>
       </footer>
     </>

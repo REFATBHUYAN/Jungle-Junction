@@ -16,8 +16,8 @@ const Banner = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">We Will Take Care of Your Kids</h1>
+          <div className="max-w-5xl">
+            <h1 className="mb-5 text-5xl font-bold">Unleash Your Inner Explorer: Welcome to <span className="text-green-300">JungleJunction</span> Toy Haven</h1>
             <p className="mb-5 font-semibold text-xl text-white">
             At Jungle Jamboree, we wholeheartedly embrace the responsibility of caring for your kids. With boundless enthusiasm, we create a safe haven where young adventurers can thrive. From exhilarating jungle-inspired activities to personalized attention, we are dedicated to ensuring your children's happiness, well-being, and unforgettable experiences.
             </p>

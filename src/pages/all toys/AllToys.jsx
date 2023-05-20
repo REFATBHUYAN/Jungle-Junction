@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../../hook/useTitle";
 // import ToyModal from "./ToyModal";
 
 const AllToys = () => {
@@ -7,6 +8,7 @@ const AllToys = () => {
   console.log(toys);
   const [alltoys, setAllToys] = useState(toys);
   const [search, setSearch] = useState("");
+  useTitle('All Toys')
 
   const handleSearch = (e) => {
     e.preventDefault();
