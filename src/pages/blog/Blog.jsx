@@ -8,7 +8,7 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto">
         <h1 className="font-bold text-center py-10 text-5xl">Blogs</h1>
         <div className="grid grid-cols-1 py-10 gap-2 ">
-          <div className="card w-full bg-green-400 text-primary-content ">
+          <div className="card w-full bg-green-400  text-black">
             <div className="card-body">
               <h2 className="card-title text-black">
                 1. What is an access token and refresh token? How do they work
@@ -34,7 +34,7 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <div className="card w-full bg-green-400 text-primary-content text-black">
+          <div className="card w-full bg-green-400  text-black">
             <div className="card-body">
               <h2 className="card-title text-black">
                 1. Compare SQL and NoSQL databases?
@@ -77,7 +77,7 @@ const Blog = () => {
               </ul>
             </div>
           </div>
-          <div className="card w-full bg-green-400 text-primary-content text-black">
+          <div className="card w-full bg-green-400  text-black">
             <div className="card-body">
               <h2 className="card-title text-black">
                 3. What is express js? What is Nest JS?
@@ -95,7 +95,7 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <div className="card w-full bg-green-400 text-primary-content text-black">
+          <div className="card w-full bg-green-400  text-black">
             <div className="card-body">
               <h2 className="card-title text-black">
                 4. What is MongoDB aggregate and how does it work ?

@@ -8,7 +8,7 @@ import useTitle from "../../hook/useTitle";
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
-  const [selectedOption, setSelectedOption] = useState("dese");
+  const [selectedOption, setSelectedOption] = useState("asen");
   useTitle('My Toys');
 
   useEffect(() => {
@@ -63,8 +63,8 @@ const MyToy = () => {
               // value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
             >
-              <option Value={"dese"}>Low to High</option>
-              <option value={"asen"}>High to Low</option>
+              <option Value={"asen"}>Low to High</option>
+              <option value={"dese"}>High to Low</option>
             </select>
           </div>
         </div>

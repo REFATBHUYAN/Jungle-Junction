@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Lottie from "lottie-react";
-import lottiFile from '/public/63787-secure-login.json';
+import lottiFile from '../../assets/63787-secure-login.json';
 import useTitle from "../../hook/useTitle";
 
 const Register = () => {
